@@ -1,7 +1,7 @@
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/App.css';
-import Home from './pages/Home/Home.jsx';
-import Product from './pages/Product/Product.jsx';
+import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
+import "./styles/App.css";
+import Home from "./pages/Home/Home.jsx";
+import Product from "./pages/Product/Product.jsx";
 
 // const { app, BrowserWindow } = require('electron');
 
@@ -17,14 +17,13 @@ import Product from './pages/Product/Product.jsx';
 //   newWindow.loadURL(`file://${__dirname}/public/home.html`);
 // }
 
-
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-      </Routes>
-    </Router>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/product" element={<Product />} />
+			</Routes>
+		</Router>
+	);
 }

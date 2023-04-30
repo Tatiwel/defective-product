@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import NavBar from "renderer/components/NavBar";
 
 // const windowProduct = async () => {
 //   const remote = require('electron').remote;
@@ -17,17 +18,15 @@ import { Link } from 'react-router-dom';
 // };
 
 function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-      {/* <Button variant="primary" onClick={windowProduct}>
-        Marco kk
-      </Button> */}
-      <Link to="/product">
-        <Button variant="primary">Marco kkk</Button>
-      </Link>
-    </div>
-  );
+	return (
+		<div>
+			<NavBar title="Home" />
+			<h1>Home</h1>
+			<Link to="/product">
+				<Button variant="primary">Marco kkk</Button>
+			</Link>
+		</div>
+	);
 }
 
 export default Home;
