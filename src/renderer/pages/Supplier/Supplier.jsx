@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from 
+import Navbar from
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');

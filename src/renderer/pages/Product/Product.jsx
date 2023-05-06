@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import { Row, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function Product() {
-  const [item, setItem] = useState('');
-  const [fornecedor, setFornecedor] = useState('');
-  const [descricao, setDescricao] = useState('');
-  const [quantidade, setQuantidade] = useState('');
+  const [item, setItem] = useState("");
+  const [fornecedor, setFornecedor] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [quantidade, setQuantidade] = useState("");
 
   const handleItemChange = (event) => {
     setItem(event.target.value);
@@ -89,11 +89,11 @@ function Product() {
               placeholder="Informe quantos itens apresentaram essa característica."
             />
           </Form.Group>
-          <div className="area-btn">
+          <Container className="area-btn">
             <Button className="botao-product" type="submit">
               Cadastrar
             </Button>
-          </div>
+          </Container>
         </Row>
       </Form>
       <Link to="/">Voltar</Link>

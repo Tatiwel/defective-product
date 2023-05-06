@@ -18,15 +18,15 @@ import NavBar from "renderer/components/NavBar";
 // };
 
 function Home() {
-	return (
-		<div>
-			<NavBar title="Home" />
-			<h1>Home</h1>
-			<Link to="/product">
-				<Button variant="primary">Marco kkk</Button>
-			</Link>
-		</div>
-	);
+  return (
+    <div>
+      <NavBar title="Home" />
+      <h1>Home</h1>
+      <Link to="/product">
+        <Button variant="primary">Marco kkk</Button>
+      </Link>
+    </div>
+  );
 }
 
 export default Home;
