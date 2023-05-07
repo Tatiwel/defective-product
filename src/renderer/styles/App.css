@@ -1,3 +1,26 @@
+/* Inicio Css Gerais */
+.container {
+  /* para ficar sem espaço o primeiro item da navbar */
+  margin-left: 0;
+}
+
+.no_link {
+  color: #000;
+  text-decoration: none;
+}
+
+.bt-confirmar {
+  /* botao de confirmaçao */
+  background-color: #1d419d;
+  color: #fff;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Fim Css Gerais */
+
+/* Inicio cadastro de produto */
 .painel-cadastro {
   display: flex;
   flex-direction: column;
@@ -39,12 +62,7 @@
   justify-content: center;
   width: 100%;
 }
-.botao-product {
-  background-color: #1d419d;
-  color: #fff;
-  border: none;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease-in-out;
+.bt-confirmar .botao-product {
 }
 
 .botao-product:hover {
@@ -55,6 +73,4 @@
   background-color: rgba(72, 162, 106, 0.5) !important;
 }
 
-.container {
-  margin-left: 0;
-}
+/* Fim cadastro de produto */

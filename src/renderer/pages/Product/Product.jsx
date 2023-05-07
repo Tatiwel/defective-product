@@ -42,6 +42,7 @@ function Product() {
           <Form.Group className="campo-cadastro" controlId="formBasicItem">
             <Form.Label>Item:</Form.Label>
             <Form.Control
+              required
               type="text"
               id="item"
               value={item}
@@ -56,6 +57,7 @@ function Product() {
           >
             <Form.Label>Fornecedor:</Form.Label>
             <Form.Control
+              required
               type="text"
               id="fornecedor"
               value={fornecedor}
@@ -67,6 +69,7 @@ function Product() {
           <Form.Group className="campo-cadastro" controlId="formBasicDescricao">
             <Form.Label>Descrição:</Form.Label>
             <Form.Control
+              required
               className="campodescricao"
               as="textarea"
               id="descricao"
@@ -82,6 +85,7 @@ function Product() {
           >
             <Form.Label>Quantidade:</Form.Label>
             <Form.Control
+              required
               type="number"
               id="quantidade"
               value={quantidade}

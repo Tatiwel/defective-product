@@ -17,10 +17,14 @@ function NavBar({ title }) {
               id="collasible-nav-dropdown"
             >
               <NavDropdown.Item>
-                <Link to="/product">Produtos</Link>
+                <Link className="no_link" to="/product">
+                  Produtos
+                </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link to="/supplier">Fornecedores</Link>
+                <Link className="no_link" to="/supplier">
+                  Fornecedores
+                </Link>
               </NavDropdown.Item>
             </NavDropdown>
             {/* ========================================== */}

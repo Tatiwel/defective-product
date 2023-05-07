@@ -2,6 +2,7 @@ import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import Home from "./pages/Home/Home.jsx";
 import Product from "./pages/Product/Product.jsx";
+import Supplier from "./pages/Supplier/Supplier.jsx";
 
 // const { app, BrowserWindow } = require('electron');
 
@@ -23,6 +24,7 @@ export default function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/product" element={<Product />} />
+        <Route path="/supplier" element={<Supplier />} />
 			</Routes>
 		</Router>
 	);
