@@ -47,8 +47,11 @@ function Product() {
               id="item"
               value={item}
               onChange={handleItemChange}
-              placeholder="Digite o item a ser cadastrado."
+              placeholder="Digite o item a ser cadastrado:"
             />
+            <Form.Control.Feedback type="invalid">
+              Preencha o campo com o nome do item.
+            </Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group
@@ -57,25 +60,23 @@ function Product() {
           >
             <Form.Label>Fornecedor:</Form.Label>
             <Form.Control
-              required
               type="text"
               id="fornecedor"
               value={fornecedor}
               onChange={handleFornecedorChange}
-              placeholder="Digite o fornecedor associado ao produto."
+              placeholder="Selecione o fornecedor associado ao produto:"
             />
           </Form.Group>
 
           <Form.Group className="campo-cadastro" controlId="formBasicDescricao">
             <Form.Label>Descrição:</Form.Label>
             <Form.Control
-              required
               className="campodescricao"
               as="textarea"
               id="descricao"
               value={descricao}
               onChange={handleDescricaoChange}
-              placeholder="Descreva qual foi a avaria ou defeito aprensetada(o) no produto."
+              placeholder="Descreva qual foi a avaria ou defeito aprensetada(o) no produto:"
             />
           </Form.Group>
 
@@ -85,7 +86,6 @@ function Product() {
           >
             <Form.Label>Quantidade:</Form.Label>
             <Form.Control
-              required
               type="number"
               id="quantidade"
               value={quantidade}
@@ -93,12 +93,12 @@ function Product() {
               placeholder="Informe quantos itens apresentaram essa característica."
             />
           </Form.Group>
-          <Container className="area-btn">
-            <Button className="botao-product" type="submit">
-              Cadastrar
-            </Button>
-          </Container>
         </Row>
+        <Container className="area-btn">
+          <Button className="bt-confirmar" type="submit">
+            Cadastrar
+          </Button>
+        </Container>
       </Form>
       <Link to="/">Voltar</Link>
     </Container>

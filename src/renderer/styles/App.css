@@ -18,13 +18,23 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
+.bt-confirmar:hover {
+  background-color: #0e9213 !important;
+}
+
+.bt-confirmar:active {
+  background-color: rgba(72, 162, 106, 0.5) !important;
+}
+
 /* Fim Css Gerais */
 
-/* Inicio cadastro de produto */
+/* Inicio painel de Cadastro geral */
+
 .painel-cadastro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   margin-top: 50px;
   background-color: #f8f8f8;
   border-radius: 10px;
@@ -51,6 +61,10 @@
   border: 1px solid #ccc;
 }
 
+/* Fim painel de Cadastro geral */
+
+/* Inicio cadastro de produto */
+
 .campodescricao {
   resize: none;
   min-height: 100px;
@@ -61,16 +75,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-}
-.bt-confirmar .botao-product {
-}
-
-.botao-product:hover {
-  background-color: #0e9213 !important;
-}
-
-.botao-product:active {
-  background-color: rgba(72, 162, 106, 0.5) !important;
 }
 
 /* Fim cadastro de produto */
