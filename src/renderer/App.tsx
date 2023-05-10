@@ -3,7 +3,32 @@ import "./styles/App.css";
 import Home from "./pages/Home/Home.jsx";
 import Product from "./pages/Product/Product.jsx";
 import Supplier from "./pages/Supplier/Supplier.jsx";
+import { BrowserWindow } from "electron/main";
 
+
+// main.js
+//const mainWindow = new BrowserWindow()
+
+// In this example, only windows with the `about:blank` url will be created.
+// All other urls will be blocked.
+// mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+//   if (url === '/product') {
+//     return {
+//       action: 'allow',
+//       overrideBrowserWindowOptions: {
+//         frame: false,
+//         fullscreenable: false,
+//         backgroundColor: 'black',
+//         webPreferences: {
+//           preload: 'my-child-window-preload-script.js'
+//         }
+//       }
+//     }
+//   }
+//   return { action: 'deny' }
+// })
+
+//window.open('https://github.com', '_blank', 'top=500,left=200,frame=false,nodeIntegration=no')
 // const { app, BrowserWindow } = require('electron');
 
 // function createNewWindow() {
@@ -23,7 +48,7 @@ export default function App() {
 		<Router>
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/product" element={<Product />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/supplier" element={<Supplier />} />
 			</Routes>
 		</Router>

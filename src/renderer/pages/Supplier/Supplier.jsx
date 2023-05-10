@@ -12,7 +12,7 @@ function Supplier() {
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
-    if (form.checkValidity() === false) {
+    if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
     }
@@ -85,7 +85,7 @@ function Supplier() {
           </Form.Group>
         </Row>
         <Form.Group className="mb-3">
-          <Form.Check required label="O Fornecedor é atacadista?" />
+          <Form.Check label="O Fornecedor é atacadista?" />
         </Form.Group>
         <Container className="area-btn">
           <Button className="bt-confirmar" type="submit">
