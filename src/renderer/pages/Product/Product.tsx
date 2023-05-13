@@ -8,12 +8,13 @@ import { Link } from "react-router-dom";
 function Product() {
   const [item, setItem] = useState("");
   const [fornecedor, setFornecedor] = useState("");
+  const [marca, setMarca] = useState("");
   const [descricao, setDescricao] = useState("");
   const [quantidade, setQuantidade] = useState("");
   const [validated, setValidated] = useState(false);
 
   // validador se está preenchido
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     const form = event.currentTarget;
     if (!form.checkValidity()) {
       event.preventDefault();
@@ -23,19 +24,23 @@ function Product() {
     setValidated(true);
   };
 
-  const handleItemChange = (event) => {
+  const handleItemChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setItem(event.target.value);
   };
 
-  const handleFornecedorChange = (event) => {
+  const handleMarcaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMarca(event.target.value);
+  };
+
+  const handleFornecedorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFornecedor(event.target.value);
   };
 
-  const handleDescricaoChange = (event) => {
+  const handleDescricaoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDescricao(event.target.value);
   };
 
-  const handleQuantidadeChange = (event) => {
+  const handleQuantidadeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setQuantidade(event.target.value);
   };
 
@@ -63,6 +68,24 @@ function Product() {
             />
             <Form.Control.Feedback type="invalid">
               Preencha o campo com o nome do item.
+            </Form.Control.Feedback>
+          </Form.Group>
+
+          <Form.Group
+            className="campo-cadastro"
+            controlId="formBasicFornecedor"
+          >
+            <Form.Label>Marca:</Form.Label>
+            <Form.Control
+              required
+              type="text"
+              id="marca"
+              value={marca}
+              onChange={handleMarcaChange}
+              placeholder="Selecione a marca associado ao produto:"
+            />
+            <Form.Control.Feedback type="invalid">
+              Preencha o campo com a Marca.
             </Form.Control.Feedback>
           </Form.Group>
 

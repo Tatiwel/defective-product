@@ -1,8 +1,8 @@
 import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
-import Home from "./pages/Home/Home.jsx";
-import Product from "./pages/Product/Product.jsx";
-import Supplier from "./pages/Supplier/Supplier.jsx";
+import Home from "./pages/Home/Home";
+import Product from "./pages/Product/Product";
+import Supplier from "./pages/Supplier/Supplier";
 import { BrowserWindow } from "electron/main";
 
 
