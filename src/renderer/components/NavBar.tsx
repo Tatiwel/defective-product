@@ -22,6 +22,12 @@ function NavBar({ title }: {title: string}) {
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
+                <Link className="no_link" to="/">
+                  Fabricantes
+                </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>
                 <Link className="no_link" to="/supplier">
                   Fornecedores
                 </Link>

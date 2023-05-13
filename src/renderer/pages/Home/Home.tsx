@@ -21,7 +21,7 @@ function Home() {
   return (
     <div>
       <NavBar title="Home" />
-      <h1>Home</h1>
+      <h1>This is a Home Page</h1>
       <Link to="/product">
         <Button variant="primary">Marco kkk</Button>
       </Link>
