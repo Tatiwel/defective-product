@@ -43,6 +43,7 @@ import { BrowserWindow } from "electron/main";
 //   newWindow.loadURL(`file://${__dirname}/public/home.html`);
 // }
 
+
 export default function App() {
 	return (
 		<Router>
