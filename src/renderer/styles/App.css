@@ -61,6 +61,13 @@
   border: 1px solid #ccc;
 }
 
+.area-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 /* Fim painel de Cadastro geral */
 
 /* Inicio cadastro de produto */
@@ -71,10 +78,4 @@
   max-height: 100px;
   word-wrap: break-word;
 }
-.area-btn {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 /* Fim cadastro de produto */

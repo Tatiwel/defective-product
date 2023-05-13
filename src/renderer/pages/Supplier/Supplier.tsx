@@ -1,15 +1,19 @@
-import { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
-import Row from "react-bootstrap/Row";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Supplier() {
+function Product() {
+
+  const [fornecedor, setFornecedor] = useState("");
+  const [cidade, setCidade] = useState("");
+  const [estado, setEstado] = useState("");
+  const [cep, setCEP] = useState("");
   const [validated, setValidated] = useState(false);
 
+  // validador se está preenchido
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     const form = event.currentTarget;
     if (!form.checkValidity()) {
@@ -20,73 +24,113 @@ function Supplier() {
     setValidated(true);
   };
 
+  const handleFornecedorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFornecedor(event.target.value);
+  };
+
+  const handleCidadeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCidade(event.target.value);
+  };
+
+  const handleEstadoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEstado(event.target.value);
+  };
+
+  const handleCEPChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCEP(event.target.value);
+  };
+
+  const [atacadista, setAtacadista] = useState<boolean>(false);
+
+  const handleAtacadistaChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAtacadista(e.target.checked);
+  };
+
   return (
     <Container className="painel-cadastro">
+      <h1>Cadastro de Fornecedor:</h1>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <h1>Cadastro de Fornecedor:</h1>
-        <Row className="mb-3">
-          <Form.Group
+        <Row>
+        <Form.Group
             className="campo-cadastro"
-            as={Col}
-            md="4"
-            controlId="validationCustom01"
+            controlId="formBasicFornecedor"
           >
-            <Form.Label>Fornecedor: </Form.Label>
+            <Form.Label>Fornecedor:</Form.Label>
             <Form.Control
               required
               type="text"
-              placeholder="Nome do fornecedor:"
+              id="fornecedor"
+              value={fornecedor}
+              onChange={handleFornecedorChange}
+              placeholder="Digite o fornecedor a ser cadastrado:"
             />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com o nome do fornecedor.
+              Preencha o campo com o Fornecedor.
             </Form.Control.Feedback>
           </Form.Group>
-        </Row>
-        <Row className="mb-3">
+
           <Form.Group
             className="campo-cadastro"
-            as={Col}
-            md="6"
-            controlId="validationCustom03"
+            controlId="formBasicCidade"
           >
             <Form.Label>Cidade:</Form.Label>
             <Form.Control
-              type="text"
-              placeholder="Cidade de origem:"
               required
+              type="text"
+              id="cidade"
+              value={cidade}
+              onChange={handleCidadeChange}
+              placeholder="Informe a Cidade:"
             />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com o nome da cidade.
+              Preencha o campo com a Cidade.
             </Form.Control.Feedback>
           </Form.Group>
-          <Form.Group
-            className="campo-cadastro"
-            as={Col}
-            md="3"
-            controlId="validationCustom04"
-          >
+
+          <Form.Group className="campo-cadastro" controlId="formBasicEstado">
             <Form.Label>Estado:</Form.Label>
-            <Form.Control type="text" placeholder="Insira o Estado:" required />
+            <Form.Control
+              required
+              type="text"
+              id="estado"
+              value={estado}
+              onChange={handleEstadoChange}
+              placeholder="Informe o Estado:"
+            />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com o nome do estado.
+              Preencha o campo com o Estado.
             </Form.Control.Feedback>
           </Form.Group>
+
           <Form.Group
             className="campo-cadastro"
-            as={Col}
-            md="3"
-            controlId="validationCustom05"
+            controlId="formBasicCEP"
           >
             <Form.Label>CEP:</Form.Label>
-            <Form.Control type="text" placeholder="Insira o CEP:" required />
+            <Form.Control
+              style={{ width: "50%" }}
+              required
+              type="number"
+              id="cep"
+              value={cep}
+              onChange={handleCEPChange}
+              placeholder="Informe o CEP:"
+            />
             <Form.Control.Feedback type="invalid">
               Preencha o campo com o CEP.
             </Form.Control.Feedback>
           </Form.Group>
+
+          <Form.Group>
+          <Form.Check
+          type="checkbox"
+          id="atacadistaCheck"
+          label="O Fornecedor é atacadista?"
+          checked={atacadista}
+          onChange={handleAtacadistaChange}
+          />
+          </Form.Group>
         </Row>
-        <Form.Group className="mb-3">
-          <Form.Check label="O Fornecedor é atacadista?" />
-        </Form.Group>
         <Container className="area-btn">
           <Button className="bt-confirmar" type="submit">
             Cadastrar
@@ -100,4 +144,4 @@ function Supplier() {
   );
 }
 
-export default Supplier;
+export default Product;

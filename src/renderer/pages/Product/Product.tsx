@@ -111,7 +111,6 @@ function Product() {
             <Form.Label>Descrição:</Form.Label>
             <Form.Control
               required
-              className="campodescricao"
               as="textarea"
               id="descricao"
               value={descricao}
@@ -146,8 +145,10 @@ function Product() {
             Cadastrar
           </Button>
         </Container>
+        <Link to="/">
+          <Button variant="outline-secondary">Voltar</Button>
+        </Link>
       </Form>
-      <Link to="/">Voltar</Link>
     </Container>
   );
 }
