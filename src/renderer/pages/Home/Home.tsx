@@ -20,14 +20,12 @@ import NavBar from "renderer/components/NavBar";
 
 function Home() {
   return (
+
     <div>
       <NavBar title="Home" />
-      <Container onMouseDown={(e: React.MouseEvent) => e.preventDefault()}>
+      <div className="home-container">
         <h1>This is a Home Page</h1>
-      </Container>
-      <Link to="/product">
-        <Button variant="primary">Marco kkk</Button>
-      </Link>
+      </div>
     </div>
   );
 }

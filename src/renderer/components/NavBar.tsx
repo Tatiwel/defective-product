@@ -13,7 +13,7 @@ function NavBar({ title }: {title: string}) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown
-              title="Painel de Cadastro"
+              title="Cadastros "
               id="collasible-nav-dropdown"
             >
               <NavDropdown.Item>
