@@ -3,6 +3,7 @@ import "./styles/App.css";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Supplier from "./pages/Supplier/Supplier";
+import Manufacturers from "./pages/Manufacturers/Manufacturers";
 import { BrowserWindow } from "electron/main";
 
 
@@ -51,6 +52,7 @@ export default function App() {
 				<Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/supplier" element={<Supplier />} />
+        <Route path="/manufacturers" element={<Manufacturers />} />
 			</Routes>
 		</Router>
 	);

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import NavBar from "renderer/components/NavBar";
@@ -21,7 +22,9 @@ function Home() {
   return (
     <div>
       <NavBar title="Home" />
-      <h1>This is a Home Page</h1>
+      <Container onMouseDown={(e: React.MouseEvent) => e.preventDefault()}>
+        <h1>This is a Home Page</h1>
+      </Container>
       <Link to="/product">
         <Button variant="primary">Marco kkk</Button>
       </Link>

@@ -5,7 +5,7 @@ import Form from "react-bootstrap/Form";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Product() {
+function Manufacturers() {
 
   const [fornecedor, setFornecedor] = useState("");
   const [cidade, setCidade] = useState("");
@@ -48,14 +48,14 @@ function Product() {
 
   return (
     <Container className="painel-cadastro">
-      <h1>Cadastro de Fornecedor:</h1>
+      <h1>Cadastro de Fabricante:</h1>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row>
         <Form.Group
             className="campo-cadastro"
             controlId="formBasicFornecedor"
           >
-            <Form.Label>Fornecedor:</Form.Label>
+            <Form.Label>Fabricante:</Form.Label>
             <Form.Control
               className="campo-fornecedor"
               required
@@ -63,7 +63,7 @@ function Product() {
               id="fornecedor"
               value={fornecedor}
               onChange={handleFornecedorChange}
-              placeholder=" Informe o Fabricante:"
+              placeholder="Informe o Fabricante:"
             />
             <Form.Control.Feedback type="invalid">
               Preencha o campo com o Fornecedor.
@@ -124,15 +124,6 @@ function Product() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group>
-          <Form.Check
-          type="checkbox"
-          id="atacadistaCheck"
-          label="O Fornecedor é atacadista?"
-          checked={atacadista}
-          onChange={handleAtacadistaChange}
-          />
-          </Form.Group>
         </Row>
         <Container className="area-btn">
           <Button className="bt-confirmar" type="submit">
@@ -147,4 +138,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Manufacturers;

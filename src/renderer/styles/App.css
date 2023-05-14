@@ -79,3 +79,36 @@
   word-wrap: break-word;
 }
 /* Fim cadastro de produto */
+
+/* Inicio reducao de campo fornecedor e fabricante */
+
+.campo-fornecedor {
+  max-width: 50%;
+}
+
+.campo-fabricante {
+  max-width: 50%;
+}
+
+.campo-cidade {
+  max-width: 50%;
+}
+
+.campo-estado {
+  max-width: 50%;
+}
+
+.campo-cep {
+  max-width: 50%;
+}
+
+/* Fim reducao de campo fornecedor e fabricante  */
+
+/* Inicio Navbar */
+
+.nav-bar {
+  user-select: none;
+  cursor: default;
+}
+
+/* Fim Navbar */

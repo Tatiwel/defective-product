@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Product() {
   const [item, setItem] = useState("");
   const [fornecedor, setFornecedor] = useState("");
-  const [marca, setMarca] = useState("");
+  const [fabricante, setFabricante] = useState("");
   const [descricao, setDescricao] = useState("");
   const [quantidade, setQuantidade] = useState("");
   const [validated, setValidated] = useState(false);
@@ -28,8 +28,8 @@ function Product() {
     setItem(event.target.value);
   };
 
-  const handleMarcaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMarca(event.target.value);
+  const handleFabricanteChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFabricante(event.target.value);
   };
 
   const handleFornecedorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,17 +75,17 @@ function Product() {
             className="campo-cadastro"
             controlId="formBasicFornecedor"
           >
-            <Form.Label>Marca:</Form.Label>
+            <Form.Label>Fabricante:</Form.Label>
             <Form.Control
               required
               type="text"
-              id="marca"
-              value={marca}
-              onChange={handleMarcaChange}
-              placeholder="Selecione a marca associado ao produto:"
+              id="fabricante"
+              value={fabricante}
+              onChange={handleFabricanteChange}
+              placeholder="Selecione a Fabricante associado ao produto:"
             />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com a Marca.
+              Preencha o campo com a Fabricante.
             </Form.Control.Feedback>
           </Form.Group>
 

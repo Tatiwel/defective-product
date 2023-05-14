@@ -7,7 +7,7 @@ import { Link, NavLink } from "react-router-dom";
 function NavBar({ title }: {title: string}) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container className="nav-bar">
         <Navbar.Brand>{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -22,7 +22,7 @@ function NavBar({ title }: {title: string}) {
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className="no_link" to="/">
+                <Link className="no_link" to="/manufacturers">
                   Fabricantes
                 </Link>
               </NavDropdown.Item>
