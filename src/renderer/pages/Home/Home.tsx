@@ -23,7 +23,9 @@ function Home() {
 
     <div>
       <NavBar title="Home" />
-      <div className="home-container">
+      <div className="background-image">
+        <div className="mascot-image">
+        </div>
         <h1>This is a Home Page</h1>
       </div>
     </div>
