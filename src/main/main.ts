@@ -138,12 +138,11 @@ app
 
 // multimonitor windows configuration
 
-const { MultiMonitor } = require("electron-multi-monitor");
+import { MultiMonitor, MultiMonitorFactory } from "electron-multi-monitor";
 
 const numberOfWindowsToOpen = 2;
 
-//let multiMonitor = null;
-let multiMonitor: any = null;
+let multiMonitor: IMultiMonitor | null = null;
 
 function onReady() {
   console.log("app ready");
@@ -152,11 +151,11 @@ function onReady() {
 
   // const url = "https://google.com";
   // const url = "about:blank";
-  const url = `file://${__dirname}/app/index.html`;
+  const url = `file://${__dirname}/../renderer/index.ejs`;
 
-  multiMonitor.openUrl(url, numberOfWindowsToOpen).then(() => {
-    console.log("Monitor windows are opened & loaded!");
-  });
+  // multiMonitor.openUrl(url, numberOfWindowsToOpen).then(() => {
+  //   console.log("Monitor windows are opened & loaded!");
+  // });
 }
 
 app.on("ready", onReady);
@@ -174,3 +173,15 @@ app.on("activate", function () {
     onReady();
   }
 });
+
+// const multiMonitor = new MultiMonitorFactory().create();
+
+interface IMultiMonitor {
+  readonly monitors: BrowserWindow[];
+  openUrl(url: string, numberOfMonitors: number): Promise<void>;
+  destroyAllMonitors(): void;
+}
+
+// multiMonitor.openUrl(url, numberOfWindowsToOpen).then(() => {
+//   console.log("Monitor windows are opened have your URL loaded!");
+// });
