@@ -6,7 +6,6 @@ import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Product() {
-
   const [fornecedor, setFornecedor] = useState("");
   const [cidade, setCidade] = useState("");
   const [estado, setEstado] = useState("");
@@ -24,7 +23,9 @@ function Product() {
     setValidated(true);
   };
 
-  const handleFornecedorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFornecedorChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setFornecedor(event.target.value);
   };
 
@@ -51,7 +52,7 @@ function Product() {
       <h1>Cadastro de Fornecedor:</h1>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row>
-        <Form.Group
+          <Form.Group
             className="campo-cadastro"
             controlId="formBasicFornecedor"
           >
@@ -63,17 +64,14 @@ function Product() {
               id="fornecedor"
               value={fornecedor}
               onChange={handleFornecedorChange}
-              placeholder=" Informe o Fabricante:"
+              placeholder=" Informe o Fornecedor:"
             />
             <Form.Control.Feedback type="invalid">
               Preencha o campo com o Fornecedor.
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group
-            className="campo-cadastro"
-            controlId="formBasicCidade"
-          >
+          <Form.Group className="campo-cadastro" controlId="formBasicCidade">
             <Form.Label>Cidade:</Form.Label>
             <Form.Control
               className="campo-cidade"
@@ -105,10 +103,7 @@ function Product() {
             </Form.Control.Feedback>
           </Form.Group>
 
-          <Form.Group
-            className="campo-cadastro"
-            controlId="formBasicCEP"
-          >
+          <Form.Group className="campo-cadastro" controlId="formBasicCEP">
             <Form.Label>CEP:</Form.Label>
             <Form.Control
               className="campo-cep"
@@ -125,13 +120,13 @@ function Product() {
           </Form.Group>
 
           <Form.Group>
-          <Form.Check
-          type="checkbox"
-          id="atacadistaCheck"
-          label="O Fornecedor é atacadista?"
-          checked={atacadista}
-          onChange={handleAtacadistaChange}
-          />
+            <Form.Check
+              type="checkbox"
+              id="atacadistaCheck"
+              label="O Fornecedor é atacadista?"
+              checked={atacadista}
+              onChange={handleAtacadistaChange}
+            />
           </Form.Group>
         </Row>
         <Container className="area-btn">

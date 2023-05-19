@@ -3,9 +3,8 @@ import "./styles/App.css";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import Supplier from "./pages/Supplier/Supplier";
-import Manufacturers from "./pages/Manufacturers/Manufacturers";
+import Manufacturer from "./pages/Manufacturer/Manufacturer";
 import { BrowserWindow } from "electron/main";
-
 
 // main.js
 //const mainWindow = new BrowserWindow()
@@ -44,16 +43,15 @@ import { BrowserWindow } from "electron/main";
 //   newWindow.loadURL(`file://${__dirname}/public/home.html`);
 // }
 
-
 export default function App() {
-	return (
-		<Router>
-			<Routes>
-				<Route path="/" element={<Home />} />
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/supplier" element={<Supplier />} />
-        <Route path="/manufacturers" element={<Manufacturers />} />
-			</Routes>
-		</Router>
-	);
+        <Route path="/manufacturer" element={<Manufacturer />} />
+      </Routes>
+    </Router>
+  );
 }

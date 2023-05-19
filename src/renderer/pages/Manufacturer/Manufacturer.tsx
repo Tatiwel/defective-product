@@ -5,10 +5,10 @@ import Form from "react-bootstrap/Form";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Manufacturers() {
-
-  const [fornecedor, setFornecedor] = useState("");
-  const [cidade, setCidade] = useState("");
+function Manufacturer() {
+  const [fabricante, setFabricante] = useState("");
+  const [cnpj, setCNPJ] = useState("");
+  const [endereco, setEndereco] = useState("");
   const [estado, setEstado] = useState("");
   const [cep, setCEP] = useState("");
   const [validated, setValidated] = useState(false);
@@ -24,12 +24,16 @@ function Manufacturers() {
     setValidated(true);
   };
 
-  const handleFornecedorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFornecedor(event.target.value);
+  const handleFabricanteChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFabricante(event.target.value);
   };
 
-  const handleCidadeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCidade(event.target.value);
+  const handleCNPJChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCNPJ(event.target.value);
+  };
+
+  const handleEnderecoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEndereco(event.target.value);
   };
 
   const handleEstadoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,44 +55,54 @@ function Manufacturers() {
       <h1>Cadastro de Fabricante:</h1>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
         <Row>
-        <Form.Group
+          <Form.Group
             className="campo-cadastro"
-            controlId="formBasicFornecedor"
+            controlId="formBasicFabricante"
           >
             <Form.Label>Fabricante:</Form.Label>
             <Form.Control
-              className="campo-fornecedor"
+              className="campo-fabricante"
               required
               type="text"
-              id="fornecedor"
-              value={fornecedor}
-              onChange={handleFornecedorChange}
+              id="fabricante"
+              value={fabricante}
+              onChange={handleFabricanteChange}
               placeholder="Informe o Fabricante:"
             />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com o Fornecedor.
+              Preencha o campo com o Fabricante.
             </Form.Control.Feedback>
           </Form.Group>
-
-          <Form.Group
-            className="campo-cadastro"
-            controlId="formBasicCidade"
-          >
-            <Form.Label>Cidade:</Form.Label>
+          <Form.Group className="campo-cadastro" controlId="formBasicCNPJ">
+            <Form.Label>CNPJ:</Form.Label>
             <Form.Control
-              className="campo-cidade"
+              className="campo-cnpj"
               required
-              type="text"
-              id="cidade"
-              value={cidade}
-              onChange={handleCidadeChange}
-              placeholder="Informe a Cidade:"
+              type="number"
+              id="cnpj"
+              value={cnpj}
+              onChange={handleCNPJChange}
+              placeholder="Informe o CNPJ:"
             />
             <Form.Control.Feedback type="invalid">
-              Preencha o campo com a Cidade.
+              Preencha o campo com o CNPJ do Fabricante.
             </Form.Control.Feedback>
           </Form.Group>
-
+          <Form.Group className="campo-cadastro" controlId="formBasicEndereco">
+            <Form.Label>Endereço:</Form.Label>
+            <Form.Control
+              className="campo-endereco"
+              required
+              as="textarea"
+              id="endereco"
+              value={endereco}
+              onChange={handleEnderecoChange}
+              placeholder="Informe a Endereço:"
+            />
+            <Form.Control.Feedback type="invalid">
+              Preencha o campo com a Endereço.
+            </Form.Control.Feedback>
+          </Form.Group>
           <Form.Group className="campo-cadastro" controlId="formBasicEstado">
             <Form.Label>Estado:</Form.Label>
             <Form.Control
@@ -104,11 +118,7 @@ function Manufacturers() {
               Preencha o campo com o Estado.
             </Form.Control.Feedback>
           </Form.Group>
-
-          <Form.Group
-            className="campo-cadastro"
-            controlId="formBasicCEP"
-          >
+          <Form.Group className="campo-cadastro" controlId="formBasicCEP">
             <Form.Label>CEP:</Form.Label>
             <Form.Control
               className="campo-cep"
@@ -123,7 +133,6 @@ function Manufacturers() {
               Preencha o campo com o CEP.
             </Form.Control.Feedback>
           </Form.Group>
-
         </Row>
         <Container className="area-btn">
           <Button className="bt-confirmar" type="submit">
@@ -138,4 +147,4 @@ function Manufacturers() {
   );
 }
 
-export default Manufacturers;
+export default Manufacturer;

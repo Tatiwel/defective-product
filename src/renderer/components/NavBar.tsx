@@ -2,9 +2,9 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function NavBar({ title }: {title: string}) {
+function NavBar({ title }: { title: string }) {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container className="nav-bar">
@@ -12,17 +12,14 @@ function NavBar({ title }: {title: string}) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavDropdown
-              title="Cadastros "
-              id="collasible-nav-dropdown"
-            >
+            <NavDropdown title="Cadastros " id="collasible-nav-dropdown">
               <NavDropdown.Item>
                 <Link className="no_link" to="/product">
                   Produtos
                 </Link>
               </NavDropdown.Item>
               <NavDropdown.Item>
-                <Link className="no_link" to="/manufacturers">
+                <Link className="no_link" to="/manufacturer">
                   Fabricantes
                 </Link>
               </NavDropdown.Item>

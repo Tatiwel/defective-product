@@ -20,13 +20,11 @@ import NavBar from "renderer/components/NavBar";
 
 function Home() {
   return (
-
     <div>
       <NavBar title="Home" />
       <div className="background-image">
-        <div className="mascot-image">
-        </div>
         <h1>This is a Home Page</h1>
+        <div className="mascot-image" />
       </div>
     </div>
   );

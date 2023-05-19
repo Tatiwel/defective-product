@@ -43,18 +43,12 @@ html {
   position: fixed;
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 0%;
   padding: 0;
   background-image: url("/src/renderer/public/images/Background_PS.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-@media (max-width: 768px) {
-  .mascot-image {
-    width: 50% !important;
-    height: 1 00px !important;
-  }
 }
 
 .mascot-image {
@@ -63,8 +57,11 @@ html {
   height: 100%;
   background-image: url("/src/renderer/public/images/Mascote.png");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left center;
   margin-left: 20%;
+  /* subir a imagem */
+  margin-top: -2%;
+
   /* background-position: calc(5% + 50px) calc(100% - 50px); */
   /* background-size: auto; */
 }
@@ -106,6 +103,13 @@ html {
   border: 1px solid #ccc;
 }
 
+.campo-cadastro textarea{
+  resize: none;
+  min-height: 100px;
+  max-height: 100px;
+  word-wrap: break-word;
+}
+
 .area-btn {
   margin-top: 20px;
   display: flex;
@@ -115,38 +119,7 @@ html {
 
 /* Fim painel de Cadastro geral */
 
-/* Inicio cadastro de produto */
-
-.campodescricao {
-  resize: none;
-  min-height: 100px;
-  max-height: 100px;
-  word-wrap: break-word;
-}
-/* Fim cadastro de produto */
-
 /* Inicio reducao de campo fornecedor e fabricante */
-
-.campo-fornecedor {
-  max-width: 50%;
-}
-
-.campo-fabricante {
-  max-width: 50%;
-}
-
-.campo-cidade {
-  max-width: 50%;
-}
-
-.campo-estado {
-  max-width: 50%;
-}
-
-.campo-cep {
-  max-width: 50%;
-}
-
 /* Fim reducao de campo fornecedor e fabricante  */
 
 /* Inicio Navbar */
