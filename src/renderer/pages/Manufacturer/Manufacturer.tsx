@@ -44,6 +44,12 @@ function Manufacturer() {
     setCEP(event.target.value);
   };
 
+  const [atacadista, setAtacadista] = useState<boolean>(false);
+
+  const handleAtacadistaChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setAtacadista(e.target.checked);
+  };
+
   return (
     <Container className="painel-cadastro">
       <h1>Cadastro de Fabricante:</h1>
