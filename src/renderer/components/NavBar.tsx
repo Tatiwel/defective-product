@@ -6,12 +6,18 @@ import { Link } from "react-router-dom";
 
 function NavBar({ title }: { title: string }) {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container className="nav-bar">
+    <Navbar
+      className="nav-content"
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+    >
+      <Container>
         <Navbar.Brand>{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="nav-itens">
             <NavDropdown title="Cadastros " id="collasible-nav-dropdown">
               <NavDropdown.Item>
                 <Link className="no_link" to="/product">
