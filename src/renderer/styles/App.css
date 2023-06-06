@@ -62,9 +62,6 @@
 .mascot-image {
   height: 100%;
   z-index: 1;
-  background-image: url("/src/renderer/public/images/Mascote_Indicando.png");
-  background-repeat: no-repeat;
-  background-position: left center;
   /* subir a imagem */
   margin-top: -2%;
 }
@@ -73,20 +70,15 @@
   position: absolute;
   z-index: 2;
   height: 80%;
-  background-image: url("/src/renderer/public/images/Logo.png");
-  background-repeat: no-repeat;
-  background-position: center right;
 }
 
 @media screen and (max-width: 1920px) {
   .mascot-image {
-    background-size: contain;
     width: 55% !important;
     margin-left: 5% !important;
   }
 
   .logo-image {
-    background-size: contain;
     width: 25% !important;
     margin-left: 50% !important;
   }
@@ -94,13 +86,11 @@
 
 @media screen and (max-width: 1440px) {
   .mascot-image {
-    background-size: contain;
     width: 55% !important;
     margin-left: 5% !important;
   }
 
   .logo-image {
-    background-size: contain;
     width: 25% !important;
     margin-left: 50% !important;
   }
@@ -108,13 +98,11 @@
 
 @media screen and (max-width: 1366px) {
   .mascot-image {
-    background-size: contain;
     width: 55% !important;
     margin-left: 5% !important;
   }
 
   .logo-image {
-    background-size: contain;
     width: 25% !important;
     margin-left: 50% !important;
   }
