@@ -13,7 +13,7 @@ function NavBar({ title }: { title: string }) {
       bg="dark"
       variant="dark"
     >
-      <Container>
+      <Container className="navbar-header">
         <Navbar.Brand>{title}</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

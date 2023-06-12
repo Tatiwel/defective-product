@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import NavBar from "renderer/components/NavBar";
@@ -24,12 +24,20 @@ import mascote_image from "../../public/images/Mascote_Indicando.png";
 function Home() {
   return (
     <div className="header">
-      <NavBar title="Home" />
-      <div className="background-image">
-        <h1>This is a Home Page</h1>
-        <img className="logo-image" src={logo_image} alt="logo-image" />
-        <img className="mascot-image" src={mascote_image} alt="mascot-image" />
-      </div>
+      <Row>
+        <NavBar title="Home" />
+        <Col sm>
+          <div className="background-image">
+            <h1>This is a Home Page</h1>
+            <img className="logo-image" src={logo_image} alt="logo-image" />
+            <img
+              className="mascot-image"
+              src={mascote_image}
+              alt="mascot-image"
+            />
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 }
