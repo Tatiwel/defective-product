@@ -5,21 +5,19 @@ import mascote_image from "../../public/images/Mascote_Indicando.png";
 
 function Home() {
   return (
-    <div className="header">
-      <Row>
-        <NavBar title="Home" />
-        <Col md="auto">
-          <div className="background-image">
-            <h1>This is a Home Page</h1>
-            <img className="logo-image" src={logo_image} alt="logo-image" />
-            <img
-              className="mascot-image"
-              src={mascote_image}
-              alt="mascot-image"
-            />
-          </div>
-        </Col>
-      </Row>
+    <div>
+      <NavBar title="Home" />
+      <div className="main">
+        <Row className="mt-5">
+          <Col className="coiso">
+            <img className="imagem" src={mascote_image} alt="mascot-image" />
+          </Col>
+          <Col>
+            <img className="imagem" src={logo_image} alt="logo-image" />
+          </Col>
+        </Row>
+      </div>
+      <div className="footer"></div>
     </div>
   );
 }
